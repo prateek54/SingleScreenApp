@@ -6,9 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="dev.prateek.com.project1.MainActivity">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/business_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -27,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/business_name"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/bp" />
 
@@ -37,8 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginStart="@dimen/margin_bottom"
+        android:layout_marginTop="@dimen/margin_top_call"
         android:drawableLeft="@android:drawable/ic_dialog_map"
         android:drawablePadding="15dp"
         android:drawableTint="@color/colorPrimaryDark"
@@ -53,11 +58,13 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2"
         android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="@dimen/margin_top_call"
         android:drawableLeft="@android:drawable/sym_call_outgoing"
         android:drawablePadding="8dp"
         android:drawableTint="@color/colorPrimaryDark"
         android:text="@string/mob_no"
         android:textStyle="bold"
         android:autoLink="phone"/>
+</RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
